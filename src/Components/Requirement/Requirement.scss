@@ -1,0 +1,161 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// //Variables
+
+$largest-width: 1440px;
+$larger-width: 1366px;
+$large-width: 1199px;
+$medium-width: 991px;
+$small-width: 767px;
+
+//Mixin
+@mixin custom-container-width ($width) {
+    max-width: $width;
+    width: 100%;
+}
+
+
+.requirement {
+    background-color: #f3f8f9;
+
+    &__wrapper {
+        margin-top: 50px;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 100px;
+        padding-top: 94px;
+        font-family: rubik,sans-serif;
+        
+        @media only screen and (min-width: $largest-width) {
+            & {
+                @include custom-container-width(1270px);
+            }
+        }
+    
+        @media only screen and (max-width: $larger-width) {
+            & {
+                @include custom-container-width(1170px);
+            }
+        }
+    
+        @media only screen and (max-width: $large-width) {
+            & {
+                @include custom-container-width(960px);
+            }
+        }
+    
+        @media only screen and (max-width: $medium-width) {
+            & {
+                @include custom-container-width(720px);
+            }
+        }
+    
+        @media only screen and (max-width: $small-width) {
+            & {
+                @include custom-container-width(540px);
+            }
+        }
+
+        &-card {
+            display: flex !important;
+        }
+    }
+    .requirement-item:hover{
+        background-color: #226fb7;
+    }
+    .requirement-item:hover .container-card{
+        background-color: #226fb7;
+    }
+    &-item {
+        visibility: visible; 
+        animation-duration: 2000ms; 
+        animation-delay: 300ms; 
+        animation-name: fadeInUp;
+
+        padding-bottom: 30px;
+
+        // border: 1px solid #dfe9eb;
+        // background: red;
+        overflow: hidden;
+        padding: 30px;
+        color: #505050;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        height: 133px;
+        
+
+        &:hover .title{
+            color: #fff;
+            transition: 0.3ms;
+        }
+
+        &:hover .courses{
+            color: #fff;
+        }
+
+        &:hover .image{
+            background-color: #fff;
+        
+            img {
+                scale: (0.9);
+                transition: all 0.5s ease;
+            }
+        }
+        
+    }
+    
+    .image{
+        float: left;
+        // margin-right: 25px;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 100%;
+        background: rgba(22,170,202,.2);
+        text-align: center;
+        transition: all .3s ease;
+        margin-left: 20px;
+        
+    }
+    .title{
+        color: #111;
+        margin-bottom: 5px;
+        font-size: 22px;
+        transition: all .3s ease;
+        font-weight: 700;
+    
+    }
+    .courses{
+        color: #505050;
+        font-size: 15px;
+
+    }
+    .text-title{
+        margin-right: 20px;
+        margin-left: 10px;
+        padding-top: 10px;
+    }
+    .big-title{
+        padding-top: 90px;
+        font-size: 36px;
+        color: #111111;
+        padding-bottom: 50px;
+        font-family: rubik,sans-serif;
+    }    
+    .aaa{
+        padding-top: 50px;
+    }
+    
+    
+}
+.requirement{
+    .requirement-item{
+        background-color: #fff;
+    }
+
+}
