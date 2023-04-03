@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.story-title {
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.story-container {
+  width: 95%;
+  height: auto;
+  overflow: auto;
+  position: relative;
+  box-sizing: content-box !important;
+  margin-left: 15px;
+}
+.story-container:active {
+    cursor: pointer;
+  }
+  
+
+.story-container .story-info {
+  background-color: #f3f8f9;
+  width: 100%;
+  text-align: center;
+  padding: 70px 40px;
+  min-height: 493px;
+  
+  
+}
+
+.story-container .story-info .desc-img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 125px;
+}
+.desc-img .item-img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.story-container .story-info .story-item-desc {
+  font-family: "Rubik";
+  font-size: 23px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+  color: #505050;
+}
+
+.story-container .user-info-container .username {
+  color: #226fb7;
+  font-family: "Rubik";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.story-container .user-info-container .dev-plus-member {
+  color: #111111;
+  font-size: 20px;
+}
+
+.story-container .user-info-container {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.slick-dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-center;
+}
+.slick-dots li {
+  width: 40px;
+  height: 10px;
+  background-color: #72b2ef;
+  border-radius: 5px;
+}
+.slick-dots .slick-active {
+  background-color: #226fb7;
+  width: 40px;
+}
+
+.slick-dots li button {
+  width: 100%;
+  border-radius: 10px;
+}
+.slick-dots li button::before {
+  content: none;
+}
+.slick-dots li button::after {
+  content: none;
+}
+
+@media screen and (max-width: 768px) {
+  .story-container {
+    width: 100%;
+    margin: auto;
+    margin-left: 15px;
+
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .story-item-desc {
+    font-size: 10px !important;
+  }
+  .story-title {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .story-container {
+    width: 100%;
+
+  }
+}
