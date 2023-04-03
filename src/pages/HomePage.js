@@ -6,6 +6,8 @@ import FAQ from "../components/FAQ/FAQ";
 import Footer from '../components/Footer/Footer';
 import Loader from '../components/Loader/Loader';
 import Requirement from '../components/Requirement/Requirement';
+import Banner from './../components/Banner/banner';
+import About from './../components/About/about';
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -22,6 +24,8 @@ export default function HomePage() {
   else {
   return (
     <Fragment>
+      <Banner/>
+      <About/>
       <Requirement />
       <OurMainCampus />
       <Administration />
