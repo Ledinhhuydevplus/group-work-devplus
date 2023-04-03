@@ -1,0 +1,83 @@
+$medium-width: 991px;
+
+$light-gray-color: #f3f8f9;
+$dark-gray-color: #505050;;
+$black-color: #111;
+$white-color: #fff;
+$blue-color: #226fb7;
+$bright-blue-color: #1e95ba;
+
+
+.administration-section {
+    position: relative;
+    background-color: $light-gray-color;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content {
+        max-width: 700px;
+        padding: 0 15px 0 90px;
+
+        @media only screen and (max-width: $medium-width) {
+            padding: 20px 15px;
+        }
+
+        &-title {
+
+            color: $black-color;
+            font-size: 36px !important;
+            font-weight: 700 !important;
+
+            margin: 0 0 26px;
+            line-height: 1.2;
+        }
+
+        &-description {
+            font-family: rubik,sans-serif;
+            font-size: 15px !important;
+            color: $dark-gray-color;
+            line-height: 26px !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    .fadeInUp {
+        visibility: visible;
+        animation-duration: 2000ms; 
+        animation-delay: 300ms; 
+        animation-name: fadeInUp;
+    }
+
+    .custom-button {
+        color: $white-color;
+        background: $blue-color;
+        padding: 16px 58px;
+
+        border: 1px solid $blue-color;
+        border-radius: 30px;
+        display: inline-block;
+        text-transform: uppercase; 
+        font-size: 16px;
+        font-family: rubik,sans-serif;
+        font-weight: 700;
+
+        &:hover {
+            background: $bright-blue-color;
+            border: 1px solid $blue-color;
+        }
+    }
+
+    a {
+        text-decoration: none!important;
+        outline: none!important;
+
+        &:hover {
+            text-decoration: none!important;
+            background-color: $bright-blue-color;
+        }
+    }
+    
+}
