@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import OurMainCampus from '../components/OurMainCampus/OurMainCampus';
 import Administration from '../components/Administration/Administration';
+import Story from "../components/Story/Story";
 import FAQ from "../components/FAQ/FAQ";
 import Footer from '../components/Footer/Footer';
 import Loader from '../components/Loader/Loader';
@@ -23,6 +24,7 @@ export default function HomePage() {
       <OurMainCampus />
       <Administration />
       <FAQ />
+      <Story />
       <Footer />
     </Fragment>
   )
