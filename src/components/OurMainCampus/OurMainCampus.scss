@@ -1,0 +1,88 @@
+//Variables
+
+$largest-width: 1440px;
+$larger-width: 1366px;
+$large-width: 1199px;
+$medium-width: 991px;
+$small-width: 767px;
+
+//Mixin
+
+@mixin custom-container-width ($width) {
+    max-width: $width;
+    width: 100%;
+}
+
+.campus-section.main-background-image {
+    background: url('https://devplus.edu.vn/assets/images/bg/home-8-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    padding: 94px 0 70px;
+
+    @media only screen and (max-width: $medium-width) {
+        & {
+            padding: 64px 0 40px;
+        }
+    }
+
+    .title {
+        font-size: 36px !important;
+        font-weight: 700 !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .custom {
+        &-container {
+            margin-left: auto;
+            margin-right: auto;
+            
+            @media only screen and (min-width: $largest-width) {
+                & {
+                    @include custom-container-width(1270px);
+                }
+            }
+    
+            @media only screen and (max-width: $larger-width) {
+                & {
+                    @include custom-container-width(1170px);
+                }
+            }
+    
+            @media only screen and (max-width: $large-width) {
+                & {
+                    @include custom-container-width(960px);
+                }
+            }
+    
+            @media only screen and (max-width: $medium-width) {
+                & {
+                    @include custom-container-width(720px);
+                }
+            }
+    
+            @media only screen and (max-width: $small-width) {
+                & {
+                    @include custom-container-width(540px);
+                }
+            }
+    
+            .content-wrapper {
+                margin-bottom: 50px;
+    
+                @media only screen and (max-width: $medium-width) {
+                    & {
+                        margin-bottom: 30px;
+                    }
+                }
+    
+                @media only screen and (max-width: $small-width) {
+                    .title-wrapper {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.custom-collapse {
+
+    .custom-collapse-panel, .custom-active-collapse-panel {
+        border: 0px;        
+        margin-bottom: 25px;
+
+        .ant-collapse-header {
+            height: 65px;
+
+            box-shadow: 0 0 49px 0 rgba(0,0,0,.08);
+
+            padding: 0;
+
+            position: relative;
+
+            .ant-collapse-expand-icon {
+                position: absolute;
+
+                height: 65px;
+
+                margin-left: 35px;
+    
+                    @media only screen and (max-width: 1199px) {
+                        margin-left: 18px;
+                    }
+
+                .ant-collapse-arrow {
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 65px;
+                }
+            }
+
+            .ant-collapse-header-text {
+                position: absolute;
+                margin: 0 60px;
+
+                @media only screen and (max-width: 1199px) {
+                    & {
+                        margin: 0 43px;
+                    }
+                }
+
+                font-family: rubik,sans-serif;
+                line-height: 65px;
+
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        .custom-collapse-content {
+            background: #fff;
+            padding: 15px 14px!important;
+
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 25px;
+                color: #505050;
+            }
+        }
+    }
+
+    .ant-collapse-content > .ant-collapse-content-box {
+        padding: 0;
+    }
+
+    .custom-collapse-panel {
+        background: #fff;
+
+        .ant-collapse-arrow {
+            color: #111;
+        }
+
+        .ant-collapse-header-text {
+            color: #111;
+        }
+    }
+
+    .custom-active-collapse-panel {
+        background: #226fb7;
+
+        .ant-collapse-arrow {
+            color: #fff;
+        }
+
+        .ant-collapse-header-text {
+            color: #fff;
+        }
+    }
+}

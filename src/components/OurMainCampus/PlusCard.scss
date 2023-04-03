@@ -1,0 +1,29 @@
+.plus-card {
+    margin-bottom: 30px;
+
+    .course {
+        padding: 30px;
+        border: 1px solid #dfe9eb;
+        border-radius: 5px;
+        transition: all .3s ease;
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+            transition: all .3s ease;
+            margin-bottom: 30px;
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}
+
+.fadeInUp {
+    visibility: visible;
+    animation-duration: 2000ms; 
+    animation-delay: 300ms; 
+    animation-name: fadeInUp;
+}
