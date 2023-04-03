@@ -26,6 +26,9 @@ $blue-color: #226fb7;
 
         .custom {
             &-container {
+                margin-left: auto;
+                margin-right: auto;
+
                 @media only screen and (min-width: $largest-width) {
                     & {
                         @include custom-container-width(1270px);
