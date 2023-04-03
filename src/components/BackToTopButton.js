@@ -30,7 +30,7 @@ const BackToTopButton = () => {
                     height: "50px",
                     width: "50px",
                     fontSize: "50px",
-                    zIndex: "99999999999999999999999999999999999999999999999999999999999999999999999999"
+                    zIndex: "999"
                 }}
                     onClick={scrollToTop}
                 >
