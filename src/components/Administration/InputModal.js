@@ -57,7 +57,7 @@ export default function InputModal(props) {
       messageApi.open({
         type: "success",
         content: "Thank you for sending to us!",
-        duration: 2,
+        duration: 4,
       });
     }, 3000);
     form.resetFields(["username", "email", "gender", "phone"]);
