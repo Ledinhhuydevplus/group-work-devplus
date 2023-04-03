@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import "./OnePlus_RoadMap.scss";
-import { Col, Divider, Row } from "antd";
+import { Col, Row } from "antd";
 import "antd/dist/antd.css";
 import axios from "axios";
 const OnePlusCampus = () => {
