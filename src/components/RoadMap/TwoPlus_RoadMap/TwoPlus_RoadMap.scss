@@ -1,0 +1,60 @@
+.tiltComponent {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.background-content {
+    padding: 70px 15px 70px 15px;
+}
+
+.img-part {
+    margin: 0 140px;
+    transition: transform .2s;
+}
+
+.img-part:hover {
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 991px) {
+    .background-content {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .img-part {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .img-part {
+        padding: 0 70px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .img-part {
+        padding: 0 45px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .img-part {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .img-part {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 100px) {
+    .img-part {
+        padding: 0 1px;
+    }
+}
