@@ -1,0 +1,70 @@
+@import 'https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800';
+@import 'https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900';
+
+.banner {
+    padding: 125px 0 425px;
+    background: url('https://devplus.edu.vn/assets/images/devplus/Devplus_missions.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-container {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+ 
+}
+
+.title {
+    visibility: visible;
+    animation-duration: 3000ms;
+    animation-delay: 900ms;
+    animation-name: fadeInLeft;
+    color: white !important;
+    font-size: 55px !important;
+    margin-bottom: 16px !important;
+    font-weight: 700 !important;
+    font-family: nunito, sans-serif;
+}
+
+.banner-description {
+    /* Animmation */
+    visibility: visible;
+    animation-duration: 3000ms;
+    animation-delay: 900ms;
+    animation-name: fadeInRight;
+    /* Title */
+    font-size: 20px !important;
+    line-height: 30px !important;
+    margin-bottom: 35px !important;
+    color: #505050 !important;
+    font-family: rubik, sans-serif;
+    font-weight: 200 !important;
+    margin-bottom: 35px !important;
+    padding: 0px 30px 0px 30px;
+    
+}
+
+.btn{
+    border: 1px solid #ff5421;
+    color: #fff;
+    background: #ff5421;
+    padding: 16px 58px;
+    border-radius: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: rubik,sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    visibility: visible;
+    animation-duration: 3000ms;
+    animation-delay: 900ms;
+    animation-name: fadeInUp;
+}
+
+
+.btn:hover{
+    background: #ff914d;
+    color: white;
+}
