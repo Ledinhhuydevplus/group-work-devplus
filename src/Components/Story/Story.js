@@ -20,7 +20,6 @@ const Story = ({ stories }) => {
         setItemData({ data });
       });
   }, []);
-  console.log(itemData.data);
   return (
     <>
       <Container>

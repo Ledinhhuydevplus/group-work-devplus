@@ -24,7 +24,7 @@ export default function OurMainCampus() {
           </Col>
         </Row>
         <Row gutter={30}>
-          {plusCardsList.map((card, index) => (
+          {plusCardsList && plusCardsList.map((card, index) => (
             <PlusCard key={index} title={card.description} image={card.image} />
           ))}
         </Row>

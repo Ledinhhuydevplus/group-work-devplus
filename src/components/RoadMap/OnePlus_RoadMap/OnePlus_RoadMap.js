@@ -15,7 +15,6 @@ const OnePlusCampus = () => {
         setItemData({ data });
       });
   }, []);
-  console.log(itemData.data);
   return (
     <>
       <Tilt

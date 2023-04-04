@@ -46,7 +46,7 @@ export default function FAQ() {
                   className="custom-collapse"
                   onChange={(key) => openCollapse(key)}
                 >
-                  {faqsList.map((item, index) => (
+                  {faqsList && faqsList.map((item, index) => (
                     <Collapse.Panel
                       header={item.name}
                       key={index}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const BackToTopButton = () => {
-    const [backToTopButton, setBackToTopButton] = useState(false)
+    const [backToTopButton, setBackToTopButton] = useState(true)
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -31,8 +31,8 @@ const BackToTopButton = () => {
                     width: "50px",
                     fontSize: "50px",
                     zIndex: 999,
-                    visibility: 'visible',
-                    opacity: 1
+                    // visibility: 'visible',
+                    // opacity: 1
                 }}
                     onClick={scrollToTop}
                 >

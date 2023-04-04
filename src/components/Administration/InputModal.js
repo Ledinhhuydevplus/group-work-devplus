@@ -116,7 +116,6 @@ export default function InputModal(props) {
           >
             <Select
               placeholder="Select your gender"
-              onChange={console.log("Change")}
             >
               <Select.Option value="male">Male</Select.Option>
               <Select.Option value="female">Female</Select.Option>
