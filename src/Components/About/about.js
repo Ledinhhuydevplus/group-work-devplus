@@ -8,9 +8,9 @@ const { Title } = Typography;
 const about = () => {
     return (
         <Row className='about'>
-            <Col className='container' style={{ width: "1140px" }}>
+            <Col className='container'>
                 <Row className='row' gutter={[100]}>
-                    <Col lg={16} md={16} style={{ height: '400px' }} className='card-container' >
+                    <Col lg={16} md={16} className='card-container' >
                         <Card className='card'>
                             <p className='about-title'>About devplus</p>
                             <Title level={2} className='about-title2'>The Fact: Skilled labour shortage for software companies but full of freshers and
@@ -19,7 +19,7 @@ const about = () => {
                                 accelerating the skill-up progress of students and freshers.</p>
                         </Card>
                     </Col>
-                    <Col lg={8} md={8} style={{ height: '400px' }} className='second-card'>
+                    <Col lg={8} md={8} className='second-card'>
                         <Row>
                             <Title level={4} className='mini-card-title'>Road to be a devplus</Title>
                         </Row>
