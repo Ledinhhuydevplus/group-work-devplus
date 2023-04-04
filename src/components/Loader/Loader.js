@@ -1,6 +1,6 @@
 import React from 'react'
 import "antd/dist/antd.css";
-import {Row, Col} from "antd"
+import {Row} from "antd"
 import './Loader.scss'
 
 const Loader = () => {

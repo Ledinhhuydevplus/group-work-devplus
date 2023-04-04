@@ -51,7 +51,7 @@ export default function FAQ() {
                       header={item.name}
                       key={index}
                       className={
-                        index == activeKey
+                        index === activeKey
                           ? "custom-active-collapse-panel"
                           : "custom-collapse-panel"
                       }

@@ -3,7 +3,6 @@ import "./Footer.scss";
 import "antd/dist/antd.css";
 import { Col, Row, Typography, BackTop } from "antd";
 import axios from "axios";
-import Loader from '../Loader/Loader'
 import BackToTopButton from "../BackToTopButton";
 
 const Footer = () => {
