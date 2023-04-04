@@ -15,8 +15,7 @@ $small-width: 767px;
   background-color: #273c66;
   background-image: url(https://devplus.edu.vn/assets/images/bg/footer-bg.png);
   background-size: cover;
-  // bottom: 0;
-  // position: fixed;
+  margin-top: 50px;
   //footer-top
   .footer__top {
     padding: 218px 0 93px;
@@ -32,7 +31,7 @@ $small-width: 767px;
         }
         .widget__title {
           font-family: "Nunito", sans-serif;
-          font-weight: 700;
+          font-weight: 700 !important;
           color: #fff;
           font-size: 18px;
           line-height: 26px;
