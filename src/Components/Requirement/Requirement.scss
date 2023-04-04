@@ -20,8 +20,9 @@ $small-width: 767px;
     &-container {
         margin-left: auto;
         margin-right: auto;
-        padding-bottom: 100px;
-        padding-top: 94px;
+
+        padding: 94px 15px 100px 15px;
+        
         font-family: rubik,sans-serif;
         
         @media only screen and (min-width: $largest-width) {
