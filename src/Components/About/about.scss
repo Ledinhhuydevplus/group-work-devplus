@@ -4,56 +4,60 @@
         padding-right: 15px;
         margin: auto;
     }
-
+    
     .row {
         margin-left: -15px;
         margin-right: -15px;
     }
-
+    
     .card-container {
         padding: 0px 100px;
-
+    
     }
-
+    
     .card {
         background: #e7f4f6;
         padding: 30px 60px 40px;
         border-radius: 5px;
         margin-top: -66px;
     }
-
+    
     .about-title {
         /* animation */
         visibility: visible;
         animation-duration: 2000ms;
         animation-delay: 300ms;
         animation-name: fadeInUp;
-
+    
         color: #226fb7;
         font-size: 18px;
         line-height: 28px;
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 8px;
-    }
 
+        &2 {
+            font-weight: 700;
+        }
+    }
+    
     .about-description {
         /* animation */
         visibility: visible;
         animation-duration: 2000ms;
         animation-delay: 500ms;
         animation-name: fadeInUp;
-
+    
         font-size: 18px;
         line-height: 30px;
         color: #505050;
     }
-
+    
     .second-card {
         width: 100%;
         margin-top: -66px;
     }
-
+    
     .mini-card-title {
         background: #226fb7;
         font-size: 21.3px !important;
@@ -64,20 +68,20 @@
         color: #fff !important;
         margin-bottom: 10px !important;
     }
-
+    
     .mini-card {
         visibility: visible;
         animation-duration: 2000ms;
         animation-delay: 300ms;
         animation-name: fadeInUp;
     }
-
+    
     .date {
         visibility: visible;
         animation-duration: 2000ms;
         animation-delay: 300ms;
         animation-name: fadeInUp;
-
+    
         position: relative;
         background: #e7f4f6;
         margin-bottom: 12px;
@@ -86,10 +90,10 @@
         padding-left: 0 !important;
         overflow: hidden;
         font-size: 20px;
-
+    
     }
-
-    .date span {
+    
+    .date span{
         border-right: 1px solid #226fb7;
         position: absolute;
         left: 20px;
@@ -102,15 +106,16 @@
         font-weight: 600;
         width: 60px;
     }
-
+    
     .desc {
         padding-left: 95px;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 14px;
+        color: #505050;
     }
-
+    
     @media (min-width: 1200px) {
-
+    
         .container,
         .container-lg,
         .container-md,
@@ -126,14 +131,14 @@
             font-size: 20px !important;
             text-transform: uppercase;
             padding: 5px 25px !important;
-
+    
             font-weight: 600;
             color: #fff !important;
             margin-bottom: 10px !important;
         }
     }
-
-
+    
+    
     @media screen and (max-width: 990px) {
         .mini-card-title {
             background: #226fb7;
@@ -145,13 +150,13 @@
             margin-bottom: 10px !important;
         }
     }
-
-
+    
+    
     @media screen and (max-width: 770px) {
         .second-card {
             width: 100%;
             margin-top: 15px;
         }
     }
-
+    
 }

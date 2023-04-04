@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Footer.scss";
 import "antd/dist/antd.css";
-import { Col, Row, Typography, BackTop } from "antd";
-import axios from "axios";
-import Loader from '../Loader/Loader'
+import { Col, Row, Typography } from "antd";
 import BackToTopButton from "../BackToTopButton";
 
 const Footer = () => {
@@ -16,25 +14,6 @@ const Footer = () => {
           <Row className="footer__top">
             <Col className="container">
               <Row className="footer__row">
-                {/* {footerData?.data?.map(item => {
-                return (
-                  <>
-                    <Row key={item.id} >
-                      <Col lg={6} xs={24} sm={24} md={24} className="footer__widget">
-                        <Typography.Text className="widget__title">
-                          {item.title}
-                        </Typography.Text>
-                        <ul className="widget__description">
-                          <li>
-                            {item.description}
-                          </li>
-                        </ul>
-                      </Col>
-                    </Row >
-                  </>
-                )
-              }
-              )} */}
                 <Col lg={6} xs={24} sm={24} md={24} className="footer__widget">
                   <Typography.Text className="widget__title">
                     Develop the skills to move fast and stay ahead.
@@ -49,7 +28,7 @@ const Footer = () => {
                 </Col>
                 <Col lg={6} xs={24} sm={24} md={24} className="footer__widget">
                   <Typography.Text className="widget__title">
-                    For develop
+                    For devplus
                   </Typography.Text>
                   <ul className="widget__description">
                     <li>

@@ -34,12 +34,12 @@ export default function Administration() {
       <InputModal isShown={showModal} setShowModal={setShowModal} />
       <Row style={{ alignItems: "center" }}>
         <Col lg={12} md={24} sm={24}>
-          <img src={sectionContent.image} alt="administration-img" />
+          <img src={sectionContent && sectionContent.image} alt="administration-img" />
         </Col>
         <Col lg={12} md={24} sm={24} className="wow fadeInUp">
           <Row className="content">
             <Typography.Title className="content-title">
-              {sectionContent.title}
+              {sectionContent && sectionContent.title}
             </Typography.Title>
             <Col className="content-description">
               {first_content_description}
