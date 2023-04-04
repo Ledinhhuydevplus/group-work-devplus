@@ -55,7 +55,7 @@ const Footer = () => {
                   <ul className="widget__description">
                     <li>
                       <a href="#" target="_blank">
-                        One plus (+) Programing foundation
+                        One plus (+) Programming foundation
                       </a>
                     </li>
                     <li>

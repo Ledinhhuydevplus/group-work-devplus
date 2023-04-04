@@ -9,11 +9,6 @@ export default function InputModal(props) {
 
   const [messageApi, contextHolder] = message.useMessage();
 
-  const [input, setInput] = useState({
-    email_input: "",
-    name_input: "",
-  });
-
   useEffect(() => {
     if (props.isShown) {
       setOpenModal(true);
@@ -35,11 +30,6 @@ export default function InputModal(props) {
     </Form.Item>
   );
 
-  const handleInput = (e) => {
-    e.persist();
-    setInput({ ...input, [e.target.name]: e.target.value });
-  };
-
   const handleCancel = () => {
     setOpenModal(false);
     props.setShowModal(false);
@@ -54,10 +44,10 @@ export default function InputModal(props) {
   const onFinish = (values) => {
     window.Email.send({
       Host : "smtp.elasticemail.com",
-      Username : "nhanvothanh719@gmail.com", //
-      Password : "CB787DA51D2E7D38BC019B803FA8BEB595A8", //
+      Username : "nhanvothanh719@gmail.com", 
+      Password : "CB787DA51D2E7D38BC019B803FA8BEB595A8", 
       To : values.email,
-      From : "nhanvothanh719@gmail.com", //
+      From : "nhanvothanh719@gmail.com",
       Subject : "Email sent from Devplus",
       Body : `Dear ${values.name}, your information is sent successfully to us. We will contact with you soon.`
   }).then(
@@ -111,7 +101,7 @@ export default function InputModal(props) {
             hasFeedback
             rules={[{ required: true, message: "Please input your name!" }]}
           >
-            <Input placeholder="Input your name" name="name_input" onChange={handleInput} />
+            <Input placeholder="Input your name" />
           </Form.Item>
 
           <Form.Item
@@ -123,7 +113,7 @@ export default function InputModal(props) {
               { type: "email", message: "Input email is not valid!" },
             ]}
           >
-            <Input placeholder="Input your email" name="email_input" onChange={handleInput} />
+            <Input placeholder="Input your email" />
           </Form.Item>
 
           <Form.Item

@@ -3,16 +3,21 @@ import React, { useState, useEffect } from 'react'
 const BackToTopButton = () => {
     const [backToTopButton, setBackToTopButton] = useState(true)
 
+
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                setBackToTopButton(true)
-            }
-            else {
-                setBackToTopButton(false)
-            }
-        })
-    }, [])
+        function handleScroll() {
+          if (window.scrollY > 100) {
+            setBackToTopButton(true);
+            console.log(window.scrollY);
+          } else {
+            setBackToTopButton(false);
+          }
+        }
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, [true]);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -20,23 +25,33 @@ const BackToTopButton = () => {
             behavior: 'smooth'
         });
     };
+    console.log(backToTopButton, 'backToTopButton');
+
     return (
         <div>
-            {backToTopButton && (<>
+            {backToTopButton === true && (<>
                 <button style={{
                     position: "fixed",
                     bottom: "50px",
                     right: "50px",
                     height: "50px",
                     width: "50px",
-                    fontSize: "50px",
-                    zIndex: 999,
-                    // visibility: 'visible',
-                    // opacity: 1
+                    paddingBottom: "3px",
+                    fontSize: "30px",
+                    textAlign: "center",
+                    borderRadius: "50px",
+                    border: "none",
+                    backgroundColor: "#226fb7",
+                    lineHeight: "15px",
+                    color: "#fff",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.4)",
+                    cursor: "pointer",
+                    zIndex: 999
                 }}
                     onClick={scrollToTop}
                 >
-                    m
+                    <i class="fa fa-angle-up"></i>
                 </button>
             </>)}
         </div>

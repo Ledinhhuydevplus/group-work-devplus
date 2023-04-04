@@ -20,7 +20,7 @@ html, body, a {
   vertical-align: baseline;
   line-height: 26px;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-x: unset;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
