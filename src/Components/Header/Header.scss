@@ -2,7 +2,7 @@
 
 
 .logo-img{
-    width: 30vh;
+    width: 50vh;
     text-align: center;
 }
 
@@ -10,9 +10,7 @@
     padding: 30px;
     background: #fff !important ;
 }
-
 .menu-nav{
-    padding-top: 15px !important;
     font-size: 15px;
     font-weight: 600;
     line-height: 120px;
@@ -58,9 +56,6 @@ img{
     margin-left: 10px;
     }
 
-.container-right{
-    border: none !important;
-}
 
 @media only screen and (max-width: 390px){
     .container-right{
