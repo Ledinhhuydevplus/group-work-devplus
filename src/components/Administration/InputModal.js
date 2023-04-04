@@ -52,7 +52,6 @@ export default function InputModal(props) {
   ];
 
   const onFinish = (values) => {
-    //e.preventDefault();
     window.Email.send({
       Host : "smtp.elasticemail.com",
       Username : "nhanvothanh719@gmail.com", //
