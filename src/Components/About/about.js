@@ -8,7 +8,7 @@ const { Title } = Typography;
 const about = () => {
     return (
         <Row className='about'>
-            <Col className='container' style={{ width: "1140px" }}>
+            <Col className='container'>
                 <Row className='row' gutter={[100]}>
                     <Col lg={16} md={16} className='card-container' >
                         <Card className='card'>
