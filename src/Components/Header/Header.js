@@ -13,7 +13,7 @@ import {
 } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import "./header.scss";
+import "./Header.scss";
 import close from "../../assets/images/close.png";
 import React from "react";
 const { useBreakpoint } = Grid;

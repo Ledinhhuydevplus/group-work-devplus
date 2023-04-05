@@ -1,14 +1,14 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import OurMainCampus from "../Components/OurMainCampus/OurMainCampus";
-import Administration from "../Components/Administration/Administration";
-import Story from "../Components/Story/Story";
-import FAQ from "../Components/FAQ/FAQ";
-import Headernav from '../Components/Header/Header';
-import Footer from "../Components/Footer/Footer";
-import Loader from "../Components/Loader/Loader";
-import Requirement from '../Components/Requirement/Requirement';
-import Banner from "../Components/Banner/banner";
-import About from '../Components/About/about';
+import OurMainCampus from "../components/OurMainCampus/OurMainCampus";
+import Administration from "../components/Administration/Administration";
+import Story from "../components/Story/Story";
+import FAQ from "../components/FAQ/FAQ";
+import Headernav from '../components/Header/Header';
+import Footer from "../components/Footer/Footer";
+import Loader from "../components/Loader/Loader";
+import Requirement from '../components/Requirement/Requirement';
+import Banner from "../components/Banner/banner";
+import About from '../components/About/About';
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
