@@ -10,7 +10,7 @@ export default function InputModal(props) {
   const [messageApi, contextHolder] = message.useMessage();
 
   useEffect(() => {
-    if (props.isShown === true) {
+    if (props.isShown) {
       setOpenModal(true);
     }
   }, [props.isShown]);
@@ -30,11 +30,6 @@ export default function InputModal(props) {
     </Form.Item>
   );
 
-  const handleOk = () => {
-    setConfirmLoading(true);
-    props.setShowModal(false);
-  };
-
   const handleCancel = () => {
     setOpenModal(false);
     props.setShowModal(false);
@@ -47,21 +42,35 @@ export default function InputModal(props) {
   ];
 
   const onFinish = (values) => {
-    messageApi.open({
-      type: "loading",
-      content: "Loading...",
-    });
-    setTimeout(() => {
-      setOpenModal(false);
-      setConfirmLoading(false);
+    window.Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "nhanvothanh719@gmail.com", 
+      Password : "CB787DA51D2E7D38BC019B803FA8BEB595A8", 
+      To : values.email,
+      From : "nhanvothanh719@gmail.com",
+      Subject : "Email sent from Devplus",
+      Body : `Dear ${values.name}, your information is sent successfully to us. We will contact with you soon.`
+  }).then(
+    message => {
       messageApi.open({
-        type: "success",
-        content: "Thank you for sending to us!",
-        duration: 4,
+        type: "loading",
+        content: "Loading...",
       });
-    }, 3000);
-    form.resetFields(["username", "email", "gender", "phone"]);
+      setTimeout(() => {
+        setOpenModal(false);
+        setConfirmLoading(false);
+        messageApi.open({
+          type: "success",
+          content: "Thank you for sending to us!",
+          duration: 4,
+        });
+      }, 3000);
+      form.resetFields(["name", "email", "gender", "phone"]);
+      props.setShowModal(false);
+    }
+  );
   };
+
   const onFinishFailed = (errorInfo) => {
     setTimeout(() => {
       setConfirmLoading(false);
@@ -74,7 +83,6 @@ export default function InputModal(props) {
       <Modal
         title="Welcome to Devplus"
         open={openModal}
-        onOk={handleOk}
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
         footer={modalFooter}
@@ -88,12 +96,12 @@ export default function InputModal(props) {
           onFinishFailed={onFinishFailed}
         >
           <Form.Item
-            label="Username"
-            name="username"
+            label="Name"
+            name="name"
             hasFeedback
-            rules={[{ required: true, message: "Please input your username!" }]}
+            rules={[{ required: true, message: "Please input your name!" }]}
           >
-            <Input placeholder="Input your username" />
+            <Input placeholder="Input your name" />
           </Form.Item>
 
           <Form.Item
@@ -116,7 +124,6 @@ export default function InputModal(props) {
           >
             <Select
               placeholder="Select your gender"
-              onChange={console.log("Change")}
             >
               <Select.Option value="male">Male</Select.Option>
               <Select.Option value="female">Female</Select.Option>
@@ -135,15 +142,15 @@ export default function InputModal(props) {
             <Input addonBefore={prefixSelector} style={{ width: "100%" }} />
           </Form.Item>
 
-          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button
-              type="primary"
-              htmlType="submit"
-              loading={confirmLoading}
-              onClick={handleOk}
-            >
-              Submit
-            </Button>
+          <Form.Item wrapperCol={{ offset: 8, span: 16 }} shouldUpdate>
+          {() => (
+          <Button
+            type="primary"
+            htmlType="submit"
+          >
+            Submit
+          </Button>
+        )}
           </Form.Item>
         </Form>
       </Modal>

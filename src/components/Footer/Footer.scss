@@ -15,8 +15,7 @@ $small-width: 767px;
   background-color: #273c66;
   background-image: url(https://devplus.edu.vn/assets/images/bg/footer-bg.png);
   background-size: cover;
-  // bottom: 0;
-  // position: fixed;
+  margin-top: 50px;
   //footer-top
   .footer__top {
     padding: 218px 0 93px;
@@ -32,7 +31,7 @@ $small-width: 767px;
         }
         .widget__title {
           font-family: "Nunito", sans-serif;
-          font-weight: 700;
+          font-weight: 700 !important;
           color: #fff;
           font-size: 18px;
           line-height: 26px;
@@ -169,30 +168,6 @@ $small-width: 767px;
         }
       }
     }
-  }
-}
-//Scroll bar
-#scrollUp {
-  text-align: center;
-  bottom: 40px;
-  cursor: pointer;
-  display: none;
-  position: fixed;
-  right: 20px;
-  z-index: 999;
-  border-radius: 50px 50px 4px 4px;
-  i {
-    background: #226fb7;
-    border-radius: 50%;
-    height: 40px;
-    font-size: 24px;
-    font-weight: 600;
-    width: 42px;
-    color: #fff;
-    line-height: 36px;
-    transition: all 0.3s ease;
-    margin-left: 2px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
   }
 }
 @media only screen and (min-width: 1440px) {

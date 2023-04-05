@@ -39,14 +39,14 @@ export default function FAQ() {
                   expandIcon={({ isActive }) => (
                     <i
                       className={
-                        isActive ? "fa fa-bell-o" : "fa fa-bell-slash-o"
+                        isActive ? "fa fa-bell-slash-o" : "fa fa-bell-o"
                       }
                     />
                   )}
                   className="custom-collapse"
                   onChange={(key) => openCollapse(key)}
                 >
-                  {faqsList.map((item, index) => (
+                  {faqsList && faqsList.map((item, index) => (
                     <Collapse.Panel
                       header={item.name}
                       key={index}

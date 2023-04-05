@@ -77,9 +77,9 @@ $blue-color: #226fb7;
                             left: 50%;
                             transform: translate(-50%,-50%);
 
-                            width: 120px;
-                            height: 120px;
-                            line-height: 120px;
+                            width: 190px;
+                            height: 190px;
+                            line-height: 190px;
                             border-radius: 100%;
 
                             text-align: center;
@@ -129,12 +129,18 @@ $blue-color: #226fb7;
                             }
                             
                             @keyframes pulse {
-                                0% {transform:scale(0.5);
-                                    opacity:0;}
-                                  33% {transform:scale(0.8);
-                                    opacity:1;}
-                                  100% {transform:scale(1);
-                                    opacity:0;}
+                                0% {
+                                    transform:scale(0.5);
+                                    opacity:0;
+                                    }
+                                  33% {
+                                    transform:scale(0.8);
+                                    opacity:0.7;
+                                }
+                                  100% {
+                                    transform:scale(1);
+                                    opacity:0;
+                                }
                             }
                         }
                     }
@@ -152,11 +158,11 @@ $blue-color: #226fb7;
                         }
 
                     &-title {
+                        font-family: nunito, sans-serif;
                         font-size: 36px;
                         font-weight: 700;
                         line-height: 46px;
                         color: $black-color;
-                        // margin-bottom: 26px;
 
                         @media only screen and (max-width: 991px) {
                             & {
