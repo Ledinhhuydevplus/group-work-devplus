@@ -3,7 +3,7 @@ import OurMainCampus from "../Components/OurMainCampus/OurMainCampus";
 import Administration from "../Components/Administration/Administration";
 import Story from "../Components/Story/Story";
 import FAQ from "../Components/FAQ/FAQ";
-import Header from '../Components/Header/Header';
+import Headernav from '../Components/Header/Header';
 import Footer from "../Components/Footer/Footer";
 import Loader from "../Components/Loader/Loader";
 import Requirement from '../Components/Requirement/Requirement';
@@ -16,7 +16,7 @@ export default function HomePage() {
   useEffect(() => {
     setTimeout(function () {
       setLoading(false);
-    }, 5000);
+    }, 1000);
   });
 
   if (loading) {
@@ -25,7 +25,7 @@ export default function HomePage() {
   else {
   return (
     <Fragment>
-      <Header/>
+      <Headernav/>
       <Banner/>
       <About/>
       <Requirement />

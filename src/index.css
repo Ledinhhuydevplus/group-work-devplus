@@ -33,3 +33,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+a {
+  color: #226fb7;
+  transition: all .3s ease;
+  text-decoration: none!important;
+  outline: none!important;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
