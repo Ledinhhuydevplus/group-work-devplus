@@ -18,9 +18,7 @@ const About = () => {
 
         axios.get('http://localhost:1000/api/devPlus/get_be_devPlus')
             .then((response) => setRoad(response.data));
-    }, [])
-
-    console.log(road[road.length - 1]);
+    }, []);
 
     return (
         <Row className='about'>
