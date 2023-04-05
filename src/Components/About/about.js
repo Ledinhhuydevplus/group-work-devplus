@@ -1,48 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Row, Col, Card, Typography } from 'antd'
 import './about.scss'
+import axios from 'axios';
 
 const { Title } = Typography;
 
 
-const about = () => {
+const About = () => {
+
+    const [about, setAbout] = useState([]);
+    const [road, setRoad] = useState([]);
+
+
+    useEffect(() => {
+        axios.get('http://localhost:1000/api/devPlus/get_about')
+            .then((response) => setAbout(response.data));
+
+        axios.get('http://localhost:1000/api/devPlus/get_be_devPlus')
+            .then((response) => setRoad(response.data));
+    }, []);
+
     return (
         <Row className='about'>
-            <Col className='container' style={{ width: "1140px" }}>
-                <Row className='row' gutter={[100]}>
-                    <Col lg={16} md={16} className='card-container' >
+            <Col className='container'>
+                <Row className='row' gutter={[50]}>
+                    <Col lg={16} md={24} sm={24} xs={24} className='card-container' >
                         <Card className='card'>
-                            <p className='about-title'>About devplus</p>
-                            <Title level={2} className='about-title2'>The Fact: Skilled labour shortage for software companies but full of freshers and
-                                low level juniors</Title>
-                            <p className='about-description'>Our responsibility is filling the gap between the quality of graduate students and the quality of engineers. Devplus will help reducing the cost of re-training and
-                                accelerating the skill-up progress of students and freshers.</p>
+                            <p className='about-title'>{about[0] && about[0].title}</p>
+                            <Title level={2} className='about-title2'>{about[0] && about[0].name}</Title>
+                            <p className='about-description'>{about[0] && about[0].description}</p>
                         </Card>
                     </Col>
-                    <Col lg={8} md={8} className='second-card'>
-                        <Row>
-                            <Title level={4} className='mini-card-title'>Road to be a devplus</Title>
+                    <Col lg={8} md={24} sm={24} xs={24} className='second-card'>
+                        <Row className='title-card'>
+                            <div className='title-card-content'>
+                            <Title style={{ color: "white"}} level={4}>{road[0] && road[0].title}</Title>
+                            </div>
                         </Row>
-                        <Row className='date'>
-                            <span>1</span>
-                            <div className='desc'>Apply Devplus</div>
-                        </Row>
-                        <Row className='date'>
-                            <span>2</span>
-                            <div className='desc'>Testing and Interview</div>
-                        </Row>
-                        <Row className='date'>
-                            <span>3</span>
-                            <div className='desc'>1st plus (+) campus</div>
-                        </Row>
-                        <Row className='date'>
-                            <span>4</span>
-                            <div className='desc'>2nd plus (++) campus</div>
-                        </Row>
-                        <Row className='date'>
-                            <span>5</span>
-                            <div className='desc'>Onboard & start your career</div>
-                        </Row>
+                        <ul>
+                            {road.map((road_item, index) => (
+                                <li key={index} className='date' >
+                                    <span>{road_item.number}</span>
+                                    <div className='desc'>{road_item.description}</div>
+                                </li>
+                            ))}
+                        </ul>
                     </Col>
                 </Row>
             </Col>
@@ -50,4 +52,4 @@ const about = () => {
     )
 }
 
-export default about
+export default About
