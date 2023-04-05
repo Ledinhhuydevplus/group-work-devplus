@@ -8,7 +8,7 @@ import Loader from '../components/Loader/Loader';
 import Requirement from '../components/Requirement/Requirement';
 import Banner from './../components/Banner/banner';
 import About from './../components/About/about';
-import BackToTopButton from '../components/BackToTopButton';
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -18,18 +18,6 @@ export default function HomePage() {
       setLoading(false);
     }, 1000);
   });
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 100) {
-        console.log(window.scrollY);
-      } else {
-      }
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   if (loading) {
     return <Loader />
   }
