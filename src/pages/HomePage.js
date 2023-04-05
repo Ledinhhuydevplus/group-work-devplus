@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer';
 import Loader from '../components/Loader/Loader';
 import Requirement from '../components/Requirement/Requirement';
 import Banner from './../components/Banner/banner';
-import About from './../components/About/About';
+import About from '../components/About/About';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 
 export default function HomePage() {

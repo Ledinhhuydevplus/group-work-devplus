@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Row, Col, Card, Typography } from 'antd'
 import './about.scss'
 import axios from 'axios';
+import { Divider } from 'antd';
 
 const { Title } = Typography;
 
@@ -33,7 +34,9 @@ const About = () => {
                     </Col>
                     <Col lg={8} md={24} sm={24} xs={24} className='second-card'>
                         <Row className='title-card'>
+                            <div className='title-card-content'>
                             <Title style={{ color: "white"}} level={4}>{road[0] && road[0].title}</Title>
+                            </div>
                         </Row>
                         <ul>
                             {road.map((road_item, index) => (

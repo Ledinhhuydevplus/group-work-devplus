@@ -58,13 +58,16 @@
     }
 
     .title-card {
+        position: relative;
+        display: flex;
         background: #226fb7;
         font-size: 20px;
         text-transform: uppercase;
-        padding: 11px 71px;
+        padding-top: 15px;
+        padding-bottom: 7px;
         font-weight: 600;
-        color: #fff !important;
         margin-bottom: 10px !important;
+        align-items: center;
     }
     
     .mini-card {
@@ -130,7 +133,6 @@
             padding: 5px 25px !important;
     
             font-weight: 600;
-            color: #fff !important;
             margin-bottom: 10px !important;
         }
     }
