@@ -8,6 +8,7 @@ import Loader from '../components/Loader/Loader';
 import Requirement from '../components/Requirement/Requirement';
 import Banner from './../components/Banner/banner';
 import About from './../components/About/about';
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -15,24 +16,24 @@ export default function HomePage() {
   useEffect(() => {
     setTimeout(function () {
       setLoading(false);
-    }, 5000);
+    }, 1000);
   });
-
   if (loading) {
     return <Loader />
   }
   else {
-  return (
-    <Fragment>
-      <Banner/>
-      <About/>
-      <Requirement />
-      <OurMainCampus />
-      <Administration />
-      <FAQ />
-      <Story />
-      <Footer />
-    </Fragment>
-  )
+    return (
+      <Fragment>
+        <BackToTopButton />
+        <Banner />
+        <About />
+        <Requirement />
+        <OurMainCampus />
+        <Administration />
+        <FAQ />
+        <Story />
+        <Footer />
+      </Fragment>
+    )
   }
 }
