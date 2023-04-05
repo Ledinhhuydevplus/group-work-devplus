@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Row, Col, Card, Typography } from 'antd'
 import './about.scss'
 import axios from 'axios';
-import { Divider } from 'antd';
 
 const { Title } = Typography;
 
