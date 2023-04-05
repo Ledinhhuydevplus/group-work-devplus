@@ -19,7 +19,7 @@
         background: #e7f4f6;
         padding: 30px 60px 40px;
         border-radius: 5px;
-        margin-top: -66px;
+        margin-top: -58px;
     }
     
     .about-title {
@@ -54,16 +54,14 @@
     }
     
     .second-card {
-        width: 100%;
-        margin-top: -66px;
+        margin-top: -60px;
     }
-    
-    .mini-card-title {
+
+    .title-card {
         background: #226fb7;
-        font-size: 21.3px !important;
+        font-size: 20px;
         text-transform: uppercase;
-        padding: 18px 25px !important;
-        text-align: center;
+        padding: 11px 71px;
         font-weight: 600;
         color: #fff !important;
         margin-bottom: 10px !important;
@@ -90,7 +88,6 @@
         padding-left: 0 !important;
         overflow: hidden;
         font-size: 20px;
-    
     }
     
     .date span{
@@ -149,14 +146,27 @@
             color: #fff !important;
             margin-bottom: 10px !important;
         }
+
+        .second-card {
+            margin-top: 50px;
+        }
     }
+
     
     
     @media screen and (max-width: 770px) {
         .second-card {
-            width: 100%;
-            margin-top: 15px;
+            margin-top: 50px;
         }
+
+        .card {
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 991px !important;
+            width: 100% !important;
+          }
     }
     
 }
